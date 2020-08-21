@@ -8,9 +8,11 @@ import os
 import random
 import math
 
+cls = "cls" if os.name == "nt" else "clear"
+
 # Sets search type
 while True:
-	os.system("cls")
+	os.system(cls)
 	print("0 - Slower, but estimates line search is located.")
 	print("1 - Faster (x2), no line estimate.")
 	try:
@@ -22,7 +24,7 @@ while True:
 
 # Sets book
 while True:
-	os.system("cls")
+	os.system(cls)
 	
 	try:
 		bookNum = float(input("Book number: "))
@@ -42,7 +44,7 @@ chars = [
 'u','v','w','x','y','z','.',',',' ']
 
 while True:
-	os.system("cls")
+	os.system(cls)
 	page = math.floor(page)
 	if page < 1:
 		page = 1
@@ -132,7 +134,7 @@ while True:
 			if search in ''.join(searchResults):
 
 				# Informs user
-				os.system("cls")
+				os.system(cls)
 				print("Found '", end = '')
 				print(search, end = '')
 				print("' on page ", end = '')

@@ -6,7 +6,7 @@ replacementText = []
 # ------ FUNCTIONS ------- #
 
 def InputNewReplacements():
-	os.system("cls")
+	os.system("cls" if os.name == "nt" else "clear")
 	print("Enter number to replace and text to replace with.")
 	print("Example - '3 Fizz'")
 	print("Leave blank to perform operation.\n")
@@ -49,7 +49,7 @@ for i in range((endNumber+1)-startNumber):
 			text += replacementText[d]
 
 	if text == "":
-		text = str(i+startNumber);
+		text = str(i+startNumber)
 
 	print(text)
 
